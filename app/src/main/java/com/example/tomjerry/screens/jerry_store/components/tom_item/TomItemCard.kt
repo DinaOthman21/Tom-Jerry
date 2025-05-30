@@ -80,8 +80,8 @@ fun TomItemCard(
                         modifier = Modifier.padding(bottom = 8.dp),
                     ) {
                         CheesesItem(
-                            oldValue =  tom.oldValue.toString() ,
-                            newValue = tom.newValue.toString()
+                            oldValue =  tom.oldValue ,
+                            newValue = tom.newValue
                         )
                         Spacer(Modifier.width(8.dp))
                         OutlinedIconButton(

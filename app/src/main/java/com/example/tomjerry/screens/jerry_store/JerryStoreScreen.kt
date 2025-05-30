@@ -31,7 +31,6 @@ fun JerryStoreScreen() {
             Banner()
             Spacer(modifier = Modifier.height(24.dp))
             TomItemScreen()
-            Spacer(modifier = Modifier.height(12.dp))
     }
 }
 

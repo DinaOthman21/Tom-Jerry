@@ -16,7 +16,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextDecoration
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.tomjerry.R
@@ -25,14 +24,14 @@ import com.example.tomjerry.ui.theme.IbmPlexSans
 @Composable
 fun CheesesItem(
     modifier: Modifier = Modifier,
-    newValue: String,
-    oldValue: String = ""
+    newValue: Int,
+    oldValue: Int?
 ) {
     Card(
         modifier = modifier,
         colors = CardDefaults.cardColors(
             containerColor = Color(0xFFE9F6FB),
-            ),
+        ),
         shape = MaterialTheme.shapes.extraSmall
     ) {
         Row(
@@ -51,17 +50,18 @@ fun CheesesItem(
                 tint = Color(0xFF03578A)
             )
             Row {
-                Text(
-                    text = oldValue,
-                    color = Color(0xFF03578A),
-                    fontSize = 12.sp,
-                    fontWeight = FontWeight.Medium,
-                    fontFamily = IbmPlexSans,
-                    textDecoration = TextDecoration.LineThrough,
-
+                oldValue?.let {
+                    Text(
+                        text = it.toString(),
+                        color = Color(0xFF03578A),
+                        fontSize = 12.sp,
+                        fontWeight = FontWeight.Medium,
+                        fontFamily = IbmPlexSans,
+                        textDecoration = TextDecoration.LineThrough,
                     )
+                }
                 Text(
-                    text = " $newValue cheeses",
+                    text = "$newValue cheeses",
                     modifier = Modifier.padding(end = 10.dp),
                     color = Color(0xFF03578A),
                     fontSize = 12.sp,
@@ -75,8 +75,3 @@ fun CheesesItem(
     }
 }
 
-@Composable
-@Preview(showBackground = true, showSystemUi = true)
-fun CheesesItemPreview(){
-    CheesesItem(newValue = "10", oldValue = "20")
-}

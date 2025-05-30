@@ -46,7 +46,8 @@ fun TomItemHeader(){
             Spacer(Modifier.width(4.dp))
             Icon(
                 painter = painterResource(R.drawable.ic_arrow_right),
-                contentDescription = "view all"
+                contentDescription = "view all",
+                tint = Color(0xFF03578A)
             )
 
         }
