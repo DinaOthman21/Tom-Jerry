@@ -11,6 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.tomjerry.screens.jerry_store.components.Banner
 import com.example.tomjerry.screens.jerry_store.components.Header
 import com.example.tomjerry.screens.jerry_store.components.Search
 
@@ -25,6 +26,8 @@ fun JerryStoreScreen(){
         Header()
         Spacer(modifier = Modifier.height(12.dp))
         Search()
+        Spacer(modifier = Modifier.height(8.dp))
+        Banner()
     }
 }
 

@@ -4,7 +4,7 @@ import androidx.compose.foundation.background
 import com.example.tomjerry.R
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -31,14 +31,16 @@ import com.example.tomjerry.ui.theme.IbmPlexSans
 @Composable
 fun Search(){
     Row(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier.fillMaxWidth(),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(8.dp)
     ) {
         OutlinedTextField(
             value = "" ,
             onValueChange = {} ,
-            modifier = Modifier.height(48.dp),
+            modifier = Modifier
+                .weight(1f)
+                .height(48.dp),
             placeholder = {
                 Text(
                     text = "Search about tom ...",
