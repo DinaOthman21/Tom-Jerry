@@ -14,6 +14,7 @@ import androidx.compose.ui.unit.dp
 import com.example.tomjerry.screens.jerry_store.components.Banner
 import com.example.tomjerry.screens.jerry_store.components.Header
 import com.example.tomjerry.screens.jerry_store.components.Search
+import com.example.tomjerry.screens.jerry_store.components.tom_item.TomItemScreen
 
 @Composable
 fun JerryStoreScreen(){
@@ -23,11 +24,14 @@ fun JerryStoreScreen(){
             .background(Color(0xFFEEF4F6))
             .padding(horizontal = 16.dp)
     ) {
-        Header()
-        Spacer(modifier = Modifier.height(12.dp))
-        Search()
-        Spacer(modifier = Modifier.height(8.dp))
-        Banner()
+            Header()
+            Spacer(modifier = Modifier.height(12.dp))
+            Search()
+            Spacer(modifier = Modifier.height(8.dp))
+            Banner()
+            Spacer(modifier = Modifier.height(24.dp))
+            TomItemScreen()
+            Spacer(modifier = Modifier.height(12.dp))
     }
 }
 
