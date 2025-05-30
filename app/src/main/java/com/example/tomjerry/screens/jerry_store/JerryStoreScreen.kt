@@ -17,7 +17,7 @@ import com.example.tomjerry.screens.jerry_store.components.Search
 import com.example.tomjerry.screens.jerry_store.components.tom_item.TomItemScreen
 
 @Composable
-fun JerryStoreScreen(){
+fun JerryStoreScreen() {
     Column(
         modifier = Modifier
             .fillMaxSize()

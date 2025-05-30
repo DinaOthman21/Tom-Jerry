@@ -5,6 +5,8 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import com.example.tomjerry.screens.jerry_store.JerryStoreScreen
+import com.google.accompanist.systemuicontroller.SystemUiController
+import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import com.example.tomjerry.ui.theme.TomJerryTheme
 
 class MainActivity : ComponentActivity() {
@@ -13,6 +15,8 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             TomJerryTheme {
+                val systemUiController: SystemUiController = rememberSystemUiController()
+                systemUiController.isSystemBarsVisible = false
                 JerryStoreScreen()
             }
         }
