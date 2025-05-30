@@ -4,6 +4,9 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.layout.padding
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 import com.example.tomjerry.screens.jerry_store.JerryStoreScreen
 import com.google.accompanist.systemuicontroller.SystemUiController
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
@@ -17,7 +20,10 @@ class MainActivity : ComponentActivity() {
             TomJerryTheme {
                 val systemUiController: SystemUiController = rememberSystemUiController()
                 systemUiController.isSystemBarsVisible = false
-                JerryStoreScreen()
+                JerryStoreScreen(
+                    modifier = Modifier.padding(
+                    top = 46.dp)
+                )
             }
         }
     }

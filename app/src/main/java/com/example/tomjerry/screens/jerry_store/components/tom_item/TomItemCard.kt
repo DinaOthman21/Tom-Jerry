@@ -2,15 +2,14 @@ package com.example.tomjerry.screens.jerry_store.components.tom_item
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
@@ -41,22 +40,19 @@ fun TomItemCard(
     tom: TomItem
 ){
     Box(
-        modifier = Modifier.width(160.dp)
+        contentAlignment = Alignment.TopCenter,
     ){
         Card(
             modifier = Modifier
-                .align(Alignment.TopCenter)
-            .padding(top = 16.dp)
-                .height(219.dp).fillMaxWidth(),
-            shape = MaterialTheme.shapes.medium,
-            colors = CardDefaults.cardColors(
-                containerColor = Color.White
-            )
+                .fillMaxSize()
+                .padding(top = 16.dp),
+            colors = CardDefaults.cardColors(containerColor = Color.White),
+            shape = MaterialTheme.shapes.medium
         ) {
                 Column(
                     modifier = Modifier
-                        .padding(horizontal = 8.dp)
-                        .padding(top = 92.dp) ,
+                        .fillMaxSize()
+                        .padding(top = 92.dp),
                     horizontalAlignment = Alignment.CenterHorizontally
                  ) {
                     Text(
@@ -73,19 +69,32 @@ fun TomItemCard(
                         fontSize = 12.sp,
                         fontWeight = FontWeight.Normal,
                         fontFamily = IbmPlexSans,
-                        textAlign = TextAlign.Center
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier
+                            .padding(
+                                top = 8.dp,
+                                start = 8.dp, end = 8.dp
+                            )
+                            .align(Alignment.CenterHorizontally),
+                        minLines = 3,
+                        lineHeight = 18.sp
                     )
                     Spacer(Modifier.weight(1f))
                     Row(
                         modifier = Modifier.padding(bottom = 8.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.Center
                     ) {
                         CheesesItem(
                             oldValue =  tom.oldValue ,
-                            newValue = tom.newValue
+                            newValue = tom.newValue ,
+                            modifier = Modifier.padding(
+                                vertical = 6.dp,
+                                horizontal = 8.dp
+                            )
                         )
-                        Spacer(Modifier.width(8.dp))
                         OutlinedIconButton(
-                            onClick = {}, modifier = Modifier.size(30.dp),
+                            onClick = {}, modifier = Modifier.padding(end = 8.dp).size(30.dp),
                             shape = MaterialTheme.shapes.extraSmall ,
                             border = BorderStroke(1.dp, Color(0xFF03578A)),
                             colors = IconButtonDefaults.outlinedIconButtonColors(contentColor = MaterialTheme.colorScheme.primary)
