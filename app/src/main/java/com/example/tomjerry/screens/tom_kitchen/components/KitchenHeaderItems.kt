@@ -1,6 +1,8 @@
 package com.example.tomjerry.screens.tom_kitchen.components
 
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
@@ -11,6 +13,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.tomjerry.R
 import com.example.tomjerry.ui.theme.IbmPlexSans
 
 @Composable
@@ -33,4 +36,17 @@ fun TomKitchenHeaderItem(
             fontWeight = FontWeight.Medium,
             )
     }
+}
+
+@Composable
+fun TomKitchenHeaderItems() {
+    TomKitchenHeaderItem(
+        icon = R.drawable.ruler,
+        title = "Tom's Kitchen"
+    )
+    Spacer(Modifier.height(16.dp))
+    TomKitchenHeaderItem(
+        icon = R.drawable.chef,
+        title = "Shocking foods"
+    )
 }
