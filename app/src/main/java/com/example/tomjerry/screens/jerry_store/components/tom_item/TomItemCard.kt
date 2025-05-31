@@ -52,7 +52,7 @@ fun TomItemCard(
                 Column(
                     modifier = Modifier
                         .fillMaxSize()
-                        .padding(top = 92.dp),
+                        .padding(top = 92.dp, start = 8.dp , end = 8.dp , bottom = 8.dp),
                     horizontalAlignment = Alignment.CenterHorizontally
                  ) {
                     Text(
@@ -81,7 +81,6 @@ fun TomItemCard(
                     )
                     Spacer(Modifier.weight(1f))
                     Row(
-                        modifier = Modifier.padding(bottom = 8.dp),
                         verticalAlignment = Alignment.CenterVertically,
                         horizontalArrangement = Arrangement.Center
                     ) {

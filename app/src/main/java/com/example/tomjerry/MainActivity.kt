@@ -21,11 +21,11 @@ class MainActivity : ComponentActivity() {
             TomJerryTheme {
                 val systemUiController: SystemUiController = rememberSystemUiController()
                 systemUiController.isSystemBarsVisible = false
-                /*JerryStoreScreen(
+                JerryStoreScreen(
                     modifier = Modifier.padding(
                     top = 50.dp)
-                )*/
-                TomKitchenScreen()
+                )
+              //  TomKitchenScreen()
             }
         }
     }
