@@ -55,7 +55,7 @@ fun MealDetailsSection(){
                 fontSize = 18.sp,
                 fontWeight = FontWeight.Medium,
                 fontFamily = IbmPlexSans,
-                color = Color(0xDD1F1F1E),
+                color = Color(0xFF1F1F1E).copy(.87f),
             )
             Spacer(Modifier.height(8.dp))
             PreparationStepsItems()

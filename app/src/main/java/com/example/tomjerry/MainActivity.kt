@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.example.tomjerry.screens.jerry_store.JerryStoreScreen
+import com.example.tomjerry.screens.tom_kitchen.TomKitchenScreen
 import com.google.accompanist.systemuicontroller.SystemUiController
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import com.example.tomjerry.ui.theme.TomJerryTheme
@@ -20,10 +21,11 @@ class MainActivity : ComponentActivity() {
             TomJerryTheme {
                 val systemUiController: SystemUiController = rememberSystemUiController()
                 systemUiController.isSystemBarsVisible = false
-                JerryStoreScreen(
+                /*JerryStoreScreen(
                     modifier = Modifier.padding(
-                    top = 46.dp)
-                )
+                    top = 50.dp)
+                )*/
+                TomKitchenScreen()
             }
         }
     }

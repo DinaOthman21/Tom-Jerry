@@ -1,5 +1,6 @@
 package com.example.tomjerry.screens.tom_kitchen.components
 
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
@@ -49,4 +50,14 @@ fun TomKitchenHeaderItems() {
         icon = R.drawable.chef,
         title = "Shocking foods"
     )
+}
+
+@Composable
+fun TomKitchenHeaderSection(){
+    Column(
+        modifier = Modifier
+            .padding(horizontal = 16.dp)
+    ) {
+        TomKitchenHeaderItems()
+    }
 }

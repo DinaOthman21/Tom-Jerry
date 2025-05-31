@@ -59,6 +59,6 @@ fun MealDescription(){
         fontSize = 14.sp,
         fontWeight = FontWeight.Medium,
         fontFamily = IbmPlexSans,
-        color = Color(0xFF121212)
+        color = Color(0xFF121212).copy(alpha = 0.6f)
     )
 }
