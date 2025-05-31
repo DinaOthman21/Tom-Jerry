@@ -25,7 +25,11 @@ import com.example.tomjerry.ui.theme.IbmPlexSans
 
 
 @Composable
-fun KitchenButton(modifier: Modifier = Modifier) {
+fun KitchenButton(
+    modifier: Modifier = Modifier ,
+    oldValue : Int? = null ,
+    newValue : Int
+    ) {
     Button(
         colors = ButtonColors(
             contentColor = Color(0xFF226993),
@@ -58,14 +62,14 @@ fun KitchenButton(modifier: Modifier = Modifier) {
             )
             Column {
                 Text(
-                    "3 cheeses",
+                    "$newValue cheeses",
                     fontSize = 14.sp,
                     fontWeight = FontWeight.Medium,
                     fontFamily = IbmPlexSans,
                     color = Color.White
                 )
                 Text(
-                    "5 cheeses",
+                    "$oldValue cheeses",
                     fontSize = 12.sp,
                     textDecoration = TextDecoration.LineThrough,
                     fontWeight = FontWeight.Medium,
@@ -81,5 +85,5 @@ fun KitchenButton(modifier: Modifier = Modifier) {
 @Composable
 @Preview(showBackground = true, showSystemUi = true)
 fun ButtonPreview(){
-    KitchenButton()
+    KitchenButton(oldValue = 5 , newValue = 3)
 }
