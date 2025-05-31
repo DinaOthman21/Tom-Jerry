@@ -1,4 +1,4 @@
-package com.example.tomjerry.screens.tom_kitchen.components
+package com.example.tomjerry.screens.tom_kitchen.components.meal_details
 
 import androidx.compose.runtime.Composable
 import androidx.compose.material3.Card

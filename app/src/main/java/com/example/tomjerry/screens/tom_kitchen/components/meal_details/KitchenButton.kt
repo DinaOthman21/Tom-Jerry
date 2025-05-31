@@ -1,4 +1,4 @@
-package com.example.tomjerry.screens.tom_kitchen.components
+package com.example.tomjerry.screens.tom_kitchen.components.meal_details
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
