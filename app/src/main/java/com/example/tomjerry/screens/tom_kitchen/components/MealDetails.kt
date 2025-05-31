@@ -4,6 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.material3.Card
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -75,11 +76,35 @@ fun MealDetailsItem(
 }
 
 @Composable
+fun MealDetailsItems(){
+    Row(
+        modifier = Modifier.height(104.dp),
+        horizontalArrangement = Arrangement.spacedBy(8.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        MealDetailsItem(
+            modifier = Modifier.weight(1f),
+            icon = R.drawable.temperature,
+            title = "1000 V",
+            description = "Temperature "
+        )
+        MealDetailsItem(
+            modifier = Modifier.weight(1f),
+            icon = R.drawable.timer_02,
+            title = "3 sparks",
+            description = "Time"
+        )
+        MealDetailsItem(
+            modifier = Modifier.weight(1f),
+            icon = R.drawable.evil,
+            title = "1M 12K",
+            description = "No. of deaths"
+        )
+    }
+}
+
+@Composable
 @Preview(showBackground = true, showSystemUi = true)
 fun MealDetailsItemPreview(){
-    MealDetailsItem(
-        icon = R.drawable.temperature ,
-        title = "1000 V" ,
-        description = "Temperature"
-    )
+    MealDetailsItems()
 }
