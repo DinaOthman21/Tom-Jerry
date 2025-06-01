@@ -8,9 +8,11 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
@@ -52,7 +54,7 @@ fun TomItemCard(
         ) {
                 Column(
                     modifier = Modifier
-                        .fillMaxSize()
+                        .fillMaxWidth()
                         .padding(top = 92.dp, start = 8.dp , end = 8.dp , bottom = 8.dp),
                     horizontalAlignment = Alignment.CenterHorizontally
                  ) {
@@ -82,14 +84,17 @@ fun TomItemCard(
                    // Spacer(Modifier.weight(1f))
                     Row(
                         verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.Center
+                        horizontalArrangement = Arrangement.SpaceBetween ,
+                        modifier = Modifier.fillMaxWidth()
                     ) {
                         CheesesItem(
                             oldValue =  tom.oldValue ,
-                            newValue = tom.newValue
+                            newValue = tom.newValue ,
+                            modifier = Modifier.weight(.8f)
                         )
+                        Spacer(Modifier.width(8.dp))
                         OutlinedIconButton(
-                            onClick = {}, modifier = Modifier.size(30.dp),
+                            onClick = {}, modifier = Modifier.size(30.dp).weight(.2f),
                             shape = MaterialTheme.shapes.extraSmall ,
                             border = BorderStroke(1.dp, Color(0xFF03578A)),
                             colors = IconButtonDefaults.outlinedIconButtonColors(contentColor = MaterialTheme.colorScheme.primary)
