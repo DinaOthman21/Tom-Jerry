@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Card
@@ -57,7 +58,6 @@ fun TomItemCard(
                  ) {
                     Text(
                         tom.title,
-                        modifier = Modifier.padding(top = 8.dp),
                         color = Color(0xFF1F1F1E),
                         fontSize = 18.sp,
                         fontWeight = FontWeight.SemiBold,
@@ -72,28 +72,24 @@ fun TomItemCard(
                         textAlign = TextAlign.Center,
                         modifier = Modifier
                             .padding(
-                                top = 8.dp,
                                 start = 8.dp, end = 8.dp
                             )
                             .align(Alignment.CenterHorizontally),
                         minLines = 3,
                         lineHeight = 18.sp
                     )
-                    Spacer(Modifier.weight(1f))
+                    Spacer(Modifier.height(8.dp))
+                   // Spacer(Modifier.weight(1f))
                     Row(
                         verticalAlignment = Alignment.CenterVertically,
                         horizontalArrangement = Arrangement.Center
                     ) {
                         CheesesItem(
                             oldValue =  tom.oldValue ,
-                            newValue = tom.newValue ,
-                            modifier = Modifier.padding(
-                                vertical = 6.dp,
-                                horizontal = 8.dp
-                            )
+                            newValue = tom.newValue
                         )
                         OutlinedIconButton(
-                            onClick = {}, modifier = Modifier.padding(end = 8.dp).size(30.dp),
+                            onClick = {}, modifier = Modifier.size(30.dp),
                             shape = MaterialTheme.shapes.extraSmall ,
                             border = BorderStroke(1.dp, Color(0xFF03578A)),
                             colors = IconButtonDefaults.outlinedIconButtonColors(contentColor = MaterialTheme.colorScheme.primary)
