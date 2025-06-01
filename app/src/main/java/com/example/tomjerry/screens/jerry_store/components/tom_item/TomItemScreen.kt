@@ -21,7 +21,7 @@ fun TomItemScreen(){
             columns = GridCells.Fixed(2),
             verticalArrangement = Arrangement.spacedBy(12.dp),
             horizontalArrangement = Arrangement.spacedBy(8.dp),
-            contentPadding = PaddingValues(8.dp),
+            contentPadding = PaddingValues(0.dp),
             modifier = Modifier.fillMaxSize().padding(bottom = 12.dp)
         ) {
             items(toms.size) { count ->

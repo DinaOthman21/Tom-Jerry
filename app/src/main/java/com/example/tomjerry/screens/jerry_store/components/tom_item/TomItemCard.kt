@@ -112,7 +112,7 @@ fun TomItemCard(
             painter = painterResource(tom.image) ,
             contentDescription = "tom image",
             modifier = Modifier.align(Alignment.TopCenter).size(100.dp),
-            contentScale = ContentScale.Crop,
+            contentScale = ContentScale.Fit,
         )
 
     }
