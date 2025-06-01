@@ -34,6 +34,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.unit.dp
 import com.example.tomjerry.R
+import com.example.tomjerry.screens.common.CheesesItem
 import com.example.tomjerry.ui.theme.IbmPlexSans
 
 
@@ -88,8 +89,8 @@ fun TomItemCard(
                         modifier = Modifier.fillMaxWidth()
                     ) {
                         CheesesItem(
-                            oldValue =  tom.oldValue ,
-                            newValue = tom.newValue ,
+                            oldValue = tom.oldValue,
+                            newValue = tom.newValue,
                             modifier = Modifier.weight(.8f)
                         )
                         Spacer(Modifier.width(8.dp))

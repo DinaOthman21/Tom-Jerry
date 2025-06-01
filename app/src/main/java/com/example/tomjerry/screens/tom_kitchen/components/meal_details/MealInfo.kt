@@ -18,7 +18,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.tomjerry.R
-import com.example.tomjerry.screens.jerry_store.components.tom_item.CheesesItem
+import com.example.tomjerry.screens.common.CheesesItem
 import com.example.tomjerry.ui.theme.IbmPlexSans
 
 @Composable

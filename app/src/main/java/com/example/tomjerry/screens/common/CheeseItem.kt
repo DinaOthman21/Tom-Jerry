@@ -1,4 +1,4 @@
-package com.example.tomjerry.screens.jerry_store.components.tom_item
+package com.example.tomjerry.screens.common
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
