@@ -1,8 +1,11 @@
 package com.example.tomjerry.screens.tom_account.components
 
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -35,7 +38,7 @@ fun TomAccount(){
         Column(
             modifier = Modifier.padding(horizontal = 16.dp)
         ) {
-            Spacer(Modifier.padding(top=23.dp))
+            Spacer(Modifier.padding(top = 23.dp))
             StatusSection()
             Spacer(Modifier.height(24.dp))
             Text(
@@ -47,7 +50,18 @@ fun TomAccount(){
             )
             Spacer(Modifier.height(8.dp))
             SettingsSection()
+        }
             Spacer(Modifier.height(12.dp))
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(1.dp)
+                    .background(Color(0xFF001A1F).copy(alpha = .08f))
+            )
+            Spacer(Modifier.height(12.dp))
+        Column(
+            modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp)
+        ) {
             Text(
                 "His favorite foods",
                 fontSize = 20.sp,
