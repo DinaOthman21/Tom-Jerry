@@ -36,7 +36,7 @@ import androidx.compose.ui.unit.dp
 import com.example.tomjerry.R
 import com.example.tomjerry.screens.common.CheesesItem
 import com.example.tomjerry.ui.theme.IbmPlexSans
-
+import com.example.tomjerry.ui.theme.shapes
 
 
 @Composable
@@ -51,7 +51,7 @@ fun TomItemCard(
                 .fillMaxSize()
                 .padding(top = 16.dp),
             colors = CardDefaults.cardColors(containerColor = Color.White),
-            shape = MaterialTheme.shapes.medium
+            shape = shapes.medium
         ) {
                 Column(
                     modifier = Modifier
@@ -97,7 +97,7 @@ fun TomItemCard(
                         Spacer(Modifier.width(8.dp))
                         OutlinedIconButton(
                             onClick = {}, modifier = Modifier.size(30.dp).weight(.2f),
-                            shape = MaterialTheme.shapes.extraSmall ,
+                            shape = shapes.extraSmall ,
                             border = BorderStroke(1.dp, Color(0xFF03578A)),
                             colors = IconButtonDefaults.outlinedIconButtonColors(contentColor = MaterialTheme.colorScheme.primary)
                         ) {

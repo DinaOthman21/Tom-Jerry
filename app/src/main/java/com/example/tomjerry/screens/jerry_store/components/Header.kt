@@ -28,6 +28,7 @@ import com.example.tomjerry.R
 import com.example.tomjerry.ui.theme.IbmPlexSans
 import androidx.compose.material3.Icon
 import androidx.compose.foundation.layout.Box
+import com.example.tomjerry.ui.theme.shapes
 
 
 @Composable
@@ -82,7 +83,7 @@ fun Header(){
                     .border(
                         width = 1.dp,
                         color = Color(0xFF1F1F1E).copy(alpha = .15f),
-                        shape = MaterialTheme.shapes.small
+                        shape = shapes.small
                     )
                     .padding(8.dp)
             ) {

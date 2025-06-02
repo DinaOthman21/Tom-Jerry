@@ -25,7 +25,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.tomjerry.ui.theme.IbmPlexSans
-
+import com.example.tomjerry.ui.theme.shapes
 
 
 @Composable
@@ -60,7 +60,7 @@ fun Search(){
                     modifier = Modifier.size(24.dp)
                 )
             } ,
-            shape = MaterialTheme.shapes.small ,
+            shape = shapes.small,
             colors =  OutlinedTextFieldDefaults.colors(
                 unfocusedContainerColor = Color.White, focusedContainerColor = Color.White,
                 unfocusedBorderColor = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.08f),
@@ -71,7 +71,7 @@ fun Search(){
         IconButton(
             onClick = { },
             modifier = Modifier.size(48.dp)
-                .background(Color(0xFF03578A), MaterialTheme.shapes.small)
+                .background(Color(0xFF03578A), shapes.small)
         ) {
             Icon(
                 modifier = Modifier.padding(12.dp),
