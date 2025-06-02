@@ -12,6 +12,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.foundation.layout.Column
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
@@ -63,7 +64,20 @@ fun SettingItem(modifier: Modifier = Modifier, setting: SettingContent) {
 }
 
 @Composable
+fun SettingsSection(modifier: Modifier = Modifier){
+    Column(
+        verticalArrangement = Arrangement.spacedBy(12.dp),
+        modifier = modifier
+    ) {
+        settings.forEach { setting ->
+            SettingItem(setting = setting)
+        }
+    }
+}
+
+@Composable
 @Preview(showBackground = true, showSystemUi = true)
 fun SettingItemPreview(){
-    SettingItem(setting = settings[0])
+   // SettingItem(setting = settings[0])
+    SettingsSection()
 }
