@@ -25,12 +25,13 @@ import com.example.tomjerry.ui.theme.IbmPlexSans
 fun CheesesItem(
     modifier: Modifier = Modifier,
     newValue: Int,
-    oldValue: Int?
+    oldValue: Int? ,
+    color: Color
 ) {
     Card(
         modifier = modifier,
         colors = CardDefaults.cardColors(
-            containerColor = Color(0xFFE9F6FB),
+            containerColor = color
         ),
         shape = MaterialTheme.shapes.extraSmall
     ) {

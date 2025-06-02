@@ -34,12 +34,12 @@ fun MealInfo(
             Text(
                 text = "Electric Tom pasta",
                 fontSize = 20.sp,
-                fontWeight = FontWeight.SemiBold,
+                fontWeight = FontWeight.Medium,
                 fontFamily = IbmPlexSans,
-                color = Color(0xFF1F1F1E)
+                color = Color(0xFF1F1F1E).copy(alpha = .87f)
             )
             Spacer(Modifier.height(12.dp))
-            CheesesItem(newValue = 5, oldValue = null)
+            CheesesItem(newValue = 5, oldValue = null, color =  Color(0xFFD0E5F0))
         }
         IconButton(
             onClick = { },

@@ -91,7 +91,8 @@ fun TomItemCard(
                         CheesesItem(
                             oldValue = tom.oldValue,
                             newValue = tom.newValue,
-                            modifier = Modifier.weight(.8f)
+                            modifier = Modifier.weight(.8f) ,
+                            color = Color(0xFFE9F6FB)
                         )
                         Spacer(Modifier.width(8.dp))
                         OutlinedIconButton(

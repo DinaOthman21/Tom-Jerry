@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.foundation.layout.width
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -30,6 +31,7 @@ fun TomKitchenScreen() {
                 .align(Alignment.TopCenter)
                 .fillMaxSize()
                 .background(Color(0x80035484))
+                .safeDrawingPadding()
                 .padding(top = 48.dp)
         ) {
                 TomKitchenHeaderSection()
@@ -38,7 +40,7 @@ fun TomKitchenScreen() {
         }
         KitchenButton(
             newValue = 5,
-            modifier = Modifier.align(Alignment.BottomCenter)
+            modifier = Modifier.align(Alignment.BottomCenter).padding(bottom = 40.dp)
         )
         Image(
             painter = painterResource(id = R.drawable.pasta),
@@ -46,12 +48,10 @@ fun TomKitchenScreen() {
             modifier = Modifier
                 .padding(end = 24.dp)
                 .align(Alignment.TopEnd)
-                .offset(y = 20.dp)
+                .offset(y = 35.dp)
                 .width(200.dp)
                 .height(180.dp)
-
         )
-
     }
 }
 
