@@ -75,9 +75,28 @@ fun SettingsSection(modifier: Modifier = Modifier){
     }
 }
 
+val favorites: List<SettingContent> = listOf(
+    SettingContent(image = R.drawable.alert, title = "Mouses"),
+    SettingContent(image = R.drawable.hamburger, title = "Last stolen meal"),
+    SettingContent(image = R.drawable.sleeping, title = "Change sleep mood"),
+)
+
+@Composable
+fun FavoriteSection(modifier: Modifier = Modifier){
+    Column(
+        verticalArrangement = Arrangement.spacedBy(12.dp),
+        modifier = modifier
+    ) {
+        favorites.forEach { favorite ->
+            SettingItem(setting = favorite)
+        }
+    }
+}
+
 @Composable
 @Preview(showBackground = true, showSystemUi = true)
 fun SettingItemPreview(){
    // SettingItem(setting = settings[0])
-    SettingsSection()
+    //SettingsSection()
+    FavoriteSection()
 }
