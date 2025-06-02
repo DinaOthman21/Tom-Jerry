@@ -23,7 +23,9 @@ import androidx.compose.ui.unit.sp
 import com.example.tomjerry.ui.theme.IbmPlexSans
 
 @Composable
-fun TomAccount(){
+fun TomAccount(
+    modifier: Modifier = Modifier
+){
     Card(
         colors = CardColors(
             containerColor = Color(0xFFEEF4F6),
