@@ -60,7 +60,7 @@ fun TomAccount(){
             )
             Spacer(Modifier.height(12.dp))
         Column(
-            modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp)
+            modifier = Modifier.padding(horizontal = 16.dp)
         ) {
             Text(
                 "His favorite foods",
@@ -72,15 +72,15 @@ fun TomAccount(){
             Spacer(Modifier.height(8.dp))
             FavoriteSection()
             Spacer(Modifier.height(24.dp))
-            Text(
-                text = "v.TomBeta",
-                fontSize = 12.sp,
-                fontWeight = FontWeight.Normal,
-                fontFamily = IbmPlexSans,
-                color = Color(0xFF121212).copy(alpha = .6f),
-                modifier = Modifier.align(Alignment.CenterHorizontally)
-            )
         }
+        Text(
+            text = "v.TomBeta",
+            fontSize = 12.sp,
+            fontWeight = FontWeight.Normal,
+            fontFamily = IbmPlexSans,
+            color = Color(0xFF121212).copy(alpha = .6f),
+            modifier = Modifier.align(Alignment.CenterHorizontally)
+        )
         Spacer(Modifier.height(24.dp))
     }
 }
