@@ -9,7 +9,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonColors
 import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -23,6 +22,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.tomjerry.R
 import com.example.tomjerry.ui.theme.IbmPlexSans
+import com.example.tomjerry.ui.theme.shapes
 
 
 @Composable
@@ -43,7 +43,7 @@ fun KitchenButton(
             .fillMaxWidth()
             .padding(vertical = 15.dp, horizontal = 16.dp),
         onClick = {} ,
-        shape = MaterialTheme.shapes.medium
+        shape = shapes.medium
     ) {
         Row(
             verticalAlignment = Alignment.CenterVertically,

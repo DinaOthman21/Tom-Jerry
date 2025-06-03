@@ -5,11 +5,8 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -20,10 +17,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.tomjerry.ui.theme.IbmPlexSans
+import com.example.tomjerry.ui.theme.shapes
 
 data class PreparationStep(
     val number: String,
@@ -42,46 +41,51 @@ fun PreparationStepsItem(
     modifier: Modifier = Modifier,
     preparationStep: PreparationStep
 ) {
-    Row(
-        verticalAlignment = Alignment.CenterVertically,
-        modifier = modifier
-            .fillMaxWidth()
-            .clip(RoundedCornerShape(
-                topStart = 90.dp,
-                topEnd = 12.dp,
-                bottomStart = 90.dp,
-                bottomEnd = 12.dp
-            ))
-            .background(Color.White)
-    ) {
+    Box {
         Box(
-            contentAlignment = Alignment.Center,
             modifier = Modifier
+                .fillMaxSize()
+                .padding(vertical = 2.dp)
+                .padding(start = 20.dp)
+                .clip(shapes.small)
+                .background(color = Color.White)
+        ) {
+            Text(
+                preparationStep.description,
+                fontSize = 14.sp,
+                color = Color(0x99121212).copy(alpha = .6f),
+                fontFamily = IbmPlexSans,
+                fontWeight = FontWeight.Normal,
+                modifier = Modifier
+                    .padding(vertical = 8.dp)
+                    .padding(start = 26.dp)
+                    .align(Alignment.CenterStart),
+                lineHeight = 16.sp,
+                letterSpacing = 0.5.sp,
+            )
+        }
+        Box(
+            modifier = Modifier
+                .clip(RoundedCornerShape(100.dp))
+                .border(
+                    width = 1.dp,
+                    color = Color(0xFFD0E5F0),
+                    shape = CircleShape
+                )
+                .background(Color.White)
         ) {
             Text(
                 text = preparationStep.number,
                 modifier = Modifier
-                    .align(Alignment.CenterStart)
-                    .border(
-                        width = 1.dp,
-                        color = Color(0xFFD0E5F0),
-                        shape = CircleShape
-                    )
-                    .padding(horizontal = 14.dp, vertical = 10.dp),
+                    .padding(horizontal = 16.dp, vertical = 10.dp),
                 color = Color(0xFF035587),
                 fontSize = 12.sp,
-                fontWeight = FontWeight.Bold
+                fontWeight = FontWeight.Medium ,
+                textAlign = TextAlign.Center,
+                letterSpacing = 0.5.sp,
+                fontFamily = IbmPlexSans,
             )
         }
-        Spacer(Modifier.width(8.dp))
-        Text(
-            preparationStep.description,
-            fontSize = 14.sp,
-            color = Color(0x99121212),
-            fontFamily = IbmPlexSans,
-            fontWeight = FontWeight.Normal,
-            modifier = Modifier.padding(vertical = 8.dp)
-        )
     }
 }
 

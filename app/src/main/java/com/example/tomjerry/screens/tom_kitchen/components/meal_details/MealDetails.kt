@@ -11,7 +11,6 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -24,6 +23,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.tomjerry.R
 import com.example.tomjerry.ui.theme.IbmPlexSans
+import com.example.tomjerry.ui.theme.shapes
 
 @Composable
 fun MealDetailsItem(
@@ -33,7 +33,7 @@ fun MealDetailsItem(
     modifier: Modifier = Modifier,
 ) {
     Card(
-        shape = MaterialTheme.shapes.medium,
+        shape = shapes.medium,
         modifier = modifier.fillMaxWidth(),
         colors = CardDefaults.cardColors(
             containerColor = Color(0xFFD0E5F0)
