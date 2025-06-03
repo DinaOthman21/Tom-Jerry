@@ -35,7 +35,9 @@ fun MealInfo(
                 fontSize = 20.sp,
                 fontWeight = FontWeight.Medium,
                 fontFamily = IbmPlexSans,
-                color = Color(0xFF1F1F1E).copy(alpha = .87f)
+                color = Color(0xFF1F1F1E).copy(alpha = .87f),
+                lineHeight = 16.sp,
+                letterSpacing = 0.5.sp,
             )
             Spacer(Modifier.height(12.dp))
             CheeseCard(
@@ -62,6 +64,8 @@ fun MealDescription(){
         fontSize = 14.sp,
         fontWeight = FontWeight.Medium,
         fontFamily = IbmPlexSans,
-        color = Color(0xFF121212).copy(alpha = 0.6f)
+        color = Color(0xFF121212).copy(alpha = 0.6f),
+        lineHeight = 20.sp,
+        letterSpacing = 0.5.sp,
     )
 }

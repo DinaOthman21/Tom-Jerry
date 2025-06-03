@@ -44,7 +44,7 @@ fun CheeseCard(
                 modifier = Modifier.size(30.dp).padding(
                     top = 7.dp,
                     bottom = 7.dp,
-                 //   start = 10.dp,
+                    start = 8.dp,
                     end = 4.dp
                 ),
                 painter = painterResource(id = R.drawable.ic_money_bag),

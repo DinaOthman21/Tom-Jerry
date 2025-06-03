@@ -10,7 +10,6 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeDrawingPadding
-import androidx.compose.foundation.layout.width
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -47,18 +46,22 @@ fun TomKitchenScreen() {
                 MealDetailsSection()
         }
         KitchenButton(
-            newValue = 5,
+            newValue = 3,
+            oldValue = 5,
             modifier = Modifier.align(Alignment.BottomCenter)
         )
         Image(
             painter = painterResource(id = R.drawable.pasta),
             contentDescription = "meal image",
             modifier = Modifier
-                .padding(end = 24.dp)
+                .padding(
+                    end = 24.dp,
+                    top = 18.dp,
+                    start = 148.dp
+                )
+                .height(168.dp)
                 .align(Alignment.TopEnd)
-                .offset(y = 20.dp)
-                .width(200.dp)
-                .height(180.dp)
+                .offset(y = 8.dp)
         )
     }
 }

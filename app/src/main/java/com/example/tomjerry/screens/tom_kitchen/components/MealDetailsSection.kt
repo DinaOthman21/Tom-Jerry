@@ -46,6 +46,8 @@ fun MealDetailsSection(){
                 fontWeight = FontWeight.Medium,
                 fontFamily = IbmPlexSans,
                 color = Color(0xFF1F1F1E).copy(alpha = .87f),
+                lineHeight = 16.sp,
+                letterSpacing = 0.5.sp,
             )
             Spacer(Modifier.height(8.dp))
             MealDetailsItems()
@@ -56,6 +58,8 @@ fun MealDetailsSection(){
                 fontWeight = FontWeight.Medium,
                 fontFamily = IbmPlexSans,
                 color = Color(0xFF1F1F1E).copy(.87f),
+                lineHeight = 16.sp,
+                letterSpacing = 0.5.sp,
             )
             Spacer(Modifier.height(8.dp))
             PreparationStepsItems()

@@ -54,13 +54,15 @@ fun KitchenButton(
                 fontSize = 16.sp,
                 fontWeight = FontWeight.Medium,
                 fontFamily = IbmPlexSans,
-                color = Color.White
+                color = Color(0xFFFFFFFF).copy(alpha = .87f),
+                lineHeight = 16.sp,
+                letterSpacing = 0.5.sp,
             )
             Icon(
                 painter = painterResource(id = R.drawable.ellipse),
                 contentDescription = null,
                 modifier = Modifier.padding(8.dp),
-                tint = Color.Gray
+                tint = Color(0xFFFFFFFF).copy(alpha = .38f)
             )
             Column {
                 Text(
@@ -68,7 +70,9 @@ fun KitchenButton(
                     fontSize = 14.sp,
                     fontWeight = FontWeight.Medium,
                     fontFamily = IbmPlexSans,
-                    color = Color.White
+                    color = Color.White,
+                    lineHeight = 16.sp,
+                    letterSpacing = 0.5.sp,
                 )
                 Text(
                     "$oldValue cheeses",
@@ -76,11 +80,12 @@ fun KitchenButton(
                     textDecoration = TextDecoration.LineThrough,
                     fontWeight = FontWeight.Medium,
                     fontFamily = IbmPlexSans,
-                    color = Color.White,
+                    color = Color(0xFFFFFFFF).copy(alpha = .8f),
+                    lineHeight = 16.sp,
+                    letterSpacing = 0.5.sp,
                 )
             }
         }
-
     }
 }
 
