@@ -35,7 +35,7 @@ import com.example.tomjerry.ui.theme.shapes
 fun Header(){
     Row(
         modifier = Modifier
-            .padding(top = 4.dp)
+            .padding(top = 6.dp)
             .fillMaxWidth() ,
         verticalAlignment = Alignment.CenterVertically
     ) {

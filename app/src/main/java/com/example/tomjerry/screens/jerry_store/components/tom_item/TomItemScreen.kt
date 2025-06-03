@@ -25,7 +25,7 @@ fun TomItemScreen(){
             verticalArrangement = Arrangement.spacedBy(12.dp),
             horizontalArrangement = Arrangement.spacedBy(8.dp),
             contentPadding = PaddingValues(0.dp),
-            modifier = Modifier.fillMaxSize().padding(bottom = 5.dp)
+            modifier = Modifier.fillMaxSize().padding(bottom = 12.dp)
         ) {
             items(toms.size) { count ->
                 Box(
