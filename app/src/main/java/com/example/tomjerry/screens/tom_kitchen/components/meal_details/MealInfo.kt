@@ -18,7 +18,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.tomjerry.R
-import com.example.tomjerry.screens.common.CheesesItem
 import com.example.tomjerry.ui.theme.IbmPlexSans
 
 @Composable
@@ -39,7 +38,7 @@ fun MealInfo(
                 color = Color(0xFF1F1F1E).copy(alpha = .87f)
             )
             Spacer(Modifier.height(12.dp))
-            CheesesItem(
+            CheeseCard(
                 newValue = 5,
                 oldValue = null,
                 color =  Color(0xFFD0E5F0)

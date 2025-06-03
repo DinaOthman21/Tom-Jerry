@@ -14,8 +14,8 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             TomJerryTheme {
-                JerryStoreScreen()
-                  //  TomKitchenScreen()
+                // JerryStoreScreen()
+                    TomKitchenScreen()
             }
         }
     }
