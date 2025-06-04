@@ -14,7 +14,6 @@ import androidx.compose.material3.CardColors
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.material3.Text
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
@@ -75,16 +74,7 @@ fun TomAccount(
             FavoriteSection()
             Spacer(Modifier.height(24.dp))
         }
-        Text(
-            text = "v.TomBeta",
-            fontSize = 12.sp,
-            fontWeight = FontWeight.Normal,
-            fontFamily = IbmPlexSans,
-            color = Color(0xFF121212).copy(alpha = .6f),
-            modifier = Modifier.align(Alignment.CenterHorizontally)
-        )
-        Spacer(Modifier.height(24.dp))
-    }
+        }
 }
 
 @Composable

@@ -7,7 +7,6 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -21,6 +20,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.tomjerry.R
 import com.example.tomjerry.ui.theme.IbmPlexSans
+import com.example.tomjerry.ui.theme.shapes
 
 data class SettingContent(
     val image: Int,
@@ -46,19 +46,18 @@ fun SettingItem(modifier: Modifier = Modifier, setting: SettingContent) {
             modifier = Modifier
                 .background(
                     color = Color.White,
-                    shape = MaterialTheme.shapes.extraSmall
+                    shape = shapes.extraSmall
                 )
                 .padding(8.dp)
         )
         Spacer(Modifier.width(8.dp))
         Text(
             setting.title,
-            modifier = Modifier,
             fontSize = 16.sp,
             maxLines = 1,
             fontWeight = FontWeight.Medium,
             fontFamily = IbmPlexSans,
-            color = Color(0xDE1F1F1E),
+            color = Color(0xFF1F1F1E).copy(alpha = .87f),
         )
     }
 }

@@ -2,7 +2,6 @@ package com.example.tomjerry.screens.tom_account.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -10,9 +9,8 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.MaterialTheme
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.background
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -28,27 +26,16 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.tomjerry.R
 import com.example.tomjerry.ui.theme.IbmPlexSans
+import com.example.tomjerry.ui.theme.shapes
 
 
 @Composable
 fun AccountHeader(modifier: Modifier = Modifier) {
-    Box(
-        modifier = modifier
-            .fillMaxWidth()
-            .height(200.dp)
-    ) {
-        Image(
-            painter = painterResource(id = R.drawable.background_container),
-            contentDescription = "background image",
-            contentScale = ContentScale.Crop,
-            modifier = Modifier.matchParentSize()
-        )
         Column(
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally,
             modifier = Modifier
-                .padding(horizontal = 124.dp)
-                .align(Alignment.Center)
+                    .padding(top = 16.dp)
         ) {
             Image(
                 painter = painterResource(id = R.drawable.tom),
@@ -56,7 +43,7 @@ fun AccountHeader(modifier: Modifier = Modifier) {
                 contentScale = ContentScale.Crop,
                 modifier = Modifier
                     .size(64.dp)
-                    .clip(MaterialTheme.shapes.small)
+                    .clip(shapes.small)
             )
             Spacer(Modifier.height(4.dp))
                 Text(
@@ -76,25 +63,25 @@ fun AccountHeader(modifier: Modifier = Modifier) {
                     textAlign = TextAlign.Center
                 )
                 Spacer(Modifier.height(4.dp))
-                Button(
-                    onClick = { },
-                    modifier = Modifier
-                        .padding(horizontal = 8.dp),
-                    colors = ButtonDefaults.buttonColors(
-                        containerColor = Color.White.copy(alpha = 0.12f),
-                        contentColor = Color.White
+            Box(
+                modifier = Modifier
+                    .clip(RoundedCornerShape(40.dp))
+                    .background(Color(0xFFFFFFFF).copy(alpha = .12f))
+            ) {
+                Text(
+                    modifier = Modifier.padding(
+                        vertical = 5.dp,
+                        horizontal = 12.dp
                     ),
-                    shape = RoundedCornerShape(40.dp)
-                ) {
-                    Text(
-                        text = "Edit foolishness",
-                        fontSize = 10.sp,
-                        fontWeight = FontWeight.Medium,
-                        fontFamily = IbmPlexSans
-                    )
-                }
+                    text = "Edit foolishness",
+                    fontSize = 10.sp,
+                    fontWeight = FontWeight.Medium,
+                    lineHeight = 13.sp,
+                    fontFamily = IbmPlexSans,
+                    color = Color.White
+                )
+            }
         }
-    }
 }
 
 @Composable
